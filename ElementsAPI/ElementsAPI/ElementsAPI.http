@@ -1,0 +1,34 @@
+@ElementsAPI_HostAddress = http://localhost:5278
+
+### Get All Elements
+GET {{ElementsAPI_HostAddress}}/periodicelements
+Accept: application/json
+
+### Get Single Element
+GET {{ElementsAPI_HostAddress}}/periodicelements/1
+Accept: application/json
+
+### Create New Element
+POST {{ElementsAPI_HostAddress}}/periodicelements
+Content-Type: application/json
+
+{
+    "position": 11,
+    "name": "Sodium",
+    "weight": 22.9897,
+    "symbol": "Na"
+}
+
+### Update Existing Element
+PUT {{ElementsAPI_HostAddress}}/periodicelements/11
+Content-Type: application/json
+
+{
+    "position": 11,
+    "name": "Sodium",
+    "weight": 22.9897,
+    "symbol": "Na"
+}
+
+### Delete Element
+DELETE {{ElementsAPI_HostAddress}}/periodicelements/11
